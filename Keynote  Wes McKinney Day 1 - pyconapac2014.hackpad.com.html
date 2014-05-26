@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Keynote: Wes McKinney Day 1 - pyconapac2014.hackpad.com</title>
+    <!--<base href="https://pyconapac2014.hackpad.com/">--><base href=".">
+    <link rel="shortcut icon" href="https://pyconapac2014.hackpad.com/static/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://pyconapac2014.hackpad.com/static/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://pyconapac2014.hackpad.com/static/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://pyconapac2014.hackpad.com/static/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://pyconapac2014.hackpad.com/static/apple-touch-icon-144.png">
+
+    
+    <link href="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/89958fb7946010e67bb69044bcae3e04.css" rel="stylesheet" type="text/css" onerror="this.loadError=true;">
+    <link rel="search" type="application/opensearchdescription+xml" title="hackpad" href="https://pyconapac2014.hackpad.com/static/opensearch.xml">
+
+    
+    <script type="text/javascript" async="" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/ga.js"></script><script type="text/javascript" async="" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/mixpanel-2.1.min.js"></script><script src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/jquery.min.js" type="text/javascript"></script><script type="text/javascript">$.holdReady(true);</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta content="hackpad.com" name="title"><meta content="Real-time collaborative wiki" name="description"><link href="https://pyconapac2014.hackpad.com/static/img/hackpad-logo.png" rel="image_src"><meta name="fragment" content="!"><link rel="alternate" type="text/xml+oembed" href="https://pyconapac2014.hackpad.com/ep/oembed/bFMDcmVKPam" title="Keynote: Wes McKinney Day 1"><link rel="canonical" href="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com.html"><meta property="og:title" content="Keynote: Wes McKinney Day 1"><meta property="og:description" content="Information (Speaker Only) (speaker info, slide link, .. etc) *Worked in the finance area, 
+*author of &quot;Python for Data Analysis&quot; and Pandas(http://pandas.pydata.org/). 
+*run [DataPad](http://datapad.io)."><meta property="og:image" content="https://hackpad.com/static/img/hackpad-logo-112.png"><meta property="fb:app_id" content="145393915506961"><meta property="og:url" content="https://pyconapac2014.hackpad.com/bFMDcmVKPam"><meta property="og:type" content="hackpad:pad"><meta property="twitter:site" content="@hackpad">
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+
+<style type="text/css" title="dynamicsyntax"></style>
+<meta name="apple-itunes-app" content="app-id=789857184, app-argument=https://pyconapac2014.hackpad.com/bFMDcmVKPam">
+<style type="text/css" title="dynamicsyntax"></style>
+
+
+    <script type="text/javascript">try { document.domain = document.domain.split(".").slice(-2).join("."); } catch (ex) { console.log("error setting document.domain: " + ex); }</script>
+
+    
+  <style type="text/css">@-webkit-keyframes rotate {
+  from  { -webkit-transform: rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+  from  { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.dropbox-dropin-btn, .dropbox-dropin-btn:link, .dropbox-dropin-btn:hover {
+  display: inline-block;
+  height: 14px;
+  font-family: "Lucida Grande", "Segoe UI", "Tahoma", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #636363;
+  text-decoration: none;
+  padding: 1px 7px 5px 3px;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  border-bottom-color: #d4d4d4;
+  background: #fcfcfc;
+background: -moz-linear-gradient(top, #fcfcfc 0%, #f5f5f5 100%);
+background: -webkit-linear-gradient(top, #fcfcfc 0%, #f5f5f5 100%);
+background: linear-gradient(to bottom, #fcfcfc 0%, #f5f5f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f5f5f5',GradientType=0);
+}
+
+.dropbox-dropin-default:hover, .dropbox-dropin-error:hover {
+  border-color: #dedede;
+  border-bottom-color: #cacaca;
+  background: #fdfdfd;
+background: -moz-linear-gradient(top, #fdfdfd 0%, #f5f5f5 100%);
+background: -webkit-linear-gradient(top, #fdfdfd 0%, #f5f5f5 100%);
+background: linear-gradient(to bottom, #fdfdfd 0%, #f5f5f5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#f5f5f5',GradientType=0);
+}
+
+.dropbox-dropin-default:active, .dropbox-dropin-error:active {
+  border-color: #d1d1d1;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.dropbox-dropin-btn .dropin-btn-status {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  vertical-align: bottom;
+  margin: 0 5px 0 2px;
+  background: transparent url('https://www.dropbox.com/static/images/widgets/dbx-saver-status.png') no-repeat;
+  position: relative;
+  top: 2px;
+}
+
+.dropbox-dropin-default .dropin-btn-status {
+  background-position: 0px 0px;
+}
+
+.dropbox-dropin-progress .dropin-btn-status {
+  width: 18px;
+  margin: 0 4px 0 0;
+  background: url('https://www.dropbox.com/static/images/widgets/dbx-progress.png') no-repeat center center;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1.7s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: rotate;
+  animation-duration: 1.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.dropbox-dropin-success .dropin-btn-status {
+  background-position: -15px 0px;
+}
+
+.dropbox-dropin-disabled {
+  background: #e0e0e0;
+  border: 1px #dadada solid;
+  border-bottom: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.dropbox-dropin-disabled .dropin-btn-status {
+  background-position: -30px 0px;
+}
+
+.dropbox-dropin-error .dropin-btn-status {
+  background-position: -45px 0px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.4) {
+  .dropbox-dropin-btn .dropin-btn-status {
+    background-image: url('https://www.dropbox.com/static/images/widgets/dbx-saver-status-2x.png');
+    background-size: 60px 14px;
+    -webkit-background-size: 60px 14px;
+  }
+
+  .dropbox-dropin-progress .dropin-btn-status {
+    background: url('https://www.dropbox.com/static/images/widgets/dbx-progress-2x.png') no-repeat center center;
+    background-size: 20px 20px;
+    -webkit-background-size: 20px 20px;
+  }
+}
+
+.dropbox-saver:hover, .dropbox-chooser:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropbox-chooser, .dropbox-dropin-btn {
+  line-height: 11px !important;
+  text-decoration: none !important;
+  box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+}
+</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+  <body id="padbody" class="desktop-web propad nonprouser  guestbanner   hasSitebar"><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/dgdTycPTSRj.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<button type="button" id="site-toggle" data-tooltip="Workspaces" onclick="$(&#39;body&#39;).toggleClass(&#39;sitebar-open&#39;)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-menu-web"></span></button>
+
+<a href="https://pyconapac2014.hackpad.com/" id="site-iphone-back" class="iphoneshow"><i class="icon-back"></i></a>
+
+<header>
+  <div id="guestbanner">
+    <div class="banner-close icon-x">
+    </div>
+    <div id="guest-banner-msg">
+      Hackpads are smart collaborative documents.
+      <a href="https://pyconapac2014.hackpad.com/#join-hackpad">Join Hackpad Now</a>.
+    </div>
+  </div>
+
+  <div id="site-banner" style="background-image: url(&#39;/static/img/banner.jpg&#39;); background-position: left 0px top -160px"></div>
+  <nav id="padbar">
+    <a href="https://pyconapac2014.hackpad.com/" id="topbarBrand">
+      <span id="topbarBrandFullName" class="iphonehide ipadhide" title="pyconapac2014">pyconapac2014</span>
+      <span class="iphoneshow ipadshow"><strong>h</strong></span>
+    </a>
+
+    <div id="mainbar">
+      <a href="https://pyconapac2014.hackpad.com/" data-tooltip="home" id="topbarBrand2">
+        <i class="icon-home"></i>
+      </a>
+      <a href="https://pyconapac2014.hackpad.com/" id="topbarBrand3">
+        <span id="topbarBrandFullName2" class="iphonehide ipadhide" title="pyconapac2014">pyconapac2014</span>
+      </a>
+
+      <form id="createpadform" target="_blank" action="https://pyconapac2014.hackpad.com/ep/pad/newpad">
+        <button type="submit" id="createpadlink" data-tooltip="New Hackpad" onclick="modals.showModal(&#39;#page-login-box&#39;, 0); return false;" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-newpad"></span></button>
+        <input id="createpadentry-hidden" name="title" value="" type="hidden">
+      </form>
+      <form id="createpadform2" action="https://pyconapac2014.hackpad.com/ep/pad/newpad">
+        <div id="createpadbox">
+          <i class="icon-search"></i>
+          <input id="createpadentry" name="title" type="text" value="" autocomplete="off" autocorrect="off" class="ac_input">
+          <div class="ac-loading-spinny"></div>
+        </div>
+      </form>
+
+      
+  
+  <span id="toolbar" class="iphonehide">
+    
+
+    <button type="button" id="textformatbutton" data-tooltip="Formatting Options" data-type="format" class="hp-ui-button toolbar-main  hp-ui-button-toolbar"><span class="hp-ui-button-content icon-textformat"></span></button><span class="hp-ui-button-group" data-type="format">
+      <button type="button" id="boldbutton" data-tooltip="Bold (Ctrl+B)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-bold"></span></button><button type="button" id="italicsbutton" data-tooltip="Italics (Ctrl+I)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-italic"></span></button><button type="button" id="underlinebutton" data-tooltip="Underline (Ctrl+U)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-underline"></span></button><button type="button" id="strikebutton" data-tooltip="Strikethrough" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-strikethrough"></span></button>
+    </span><button type="button" id="paragraphbutton" data-tooltip="Paragraph Options" data-type="paragraph" class="hp-ui-button toolbar-main  hp-ui-button-toolbar"><span class="hp-ui-button-content icon-paragraph"></span></button><span class="hp-ui-button-group" data-type="paragraph">
+      <button type="button" id="commentbutton" data-tooltip="Comment (// at the beginning of a line)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-comment"></span></button><button type="button" id="taskbutton" data-tooltip="Task List (type [ ] at the beginning of a line, or Ctrl+\)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-check"></span></button><button type="button" id="listbutton" data-tooltip="Bulleted List (- or * at the beginning of a line)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-bullet"></span></button><button type="button" id="numberedlistbutton" data-tooltip="Numbered List (1.  at the beginning of a line)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-number"></span></button><button type="button" id="codebutton" data-tooltip="Code (4 spaces at the beginning of a line)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-code"></span></button>
+    </span><span id="toolbar-indent-group" class="hp-ui-button-group" data-type="paragraph">
+      <button type="button" id="indentbutton" data-tooltip="Indent (press Tab)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-indent"></span></button><button type="button" id="outdentbutton" data-tooltip="Unindent (press Shift-Tab)" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-outdent"></span></button>
+    </span><span id="toolbar-attach-group" class="hp-ui-button-group" data-type="attach">
+      <button type="button" id="insertimage" data-tooltip="Image" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-photo"></span></button><button type="button" id="inserttable" data-tooltip="Table" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-table"></span></button><button type="button" id="insertdropbox" data-tooltip="Dropbox File" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-dropbox"></span></button><button type="button" id="attachbutton" data-tooltip="Insert" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-insert"></span></button>
+    </span>
+    <img id="toolbar-arrow" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/editBarTriangle@2x.png">
+  </span>
+  <button type="button" id="editbutton" data-tooltip="Edit" class="hp-ui-button   hp-ui-button-toolbar"><span class="hp-ui-button-content icon-edit"></span></button>
+
+  
+  <div id="settingsbutton" data-tooltip="Pad Settings" role="menu" aria-haspopup="true" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-toolbar"><span class="hp-ui-button-content icon-gear-hollow"></span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/ep/pad/summary/bFMDcmVKPam">
+            
+              View History
+            
+          </a></li>
+          
+        
+          
+          <li><a href="javascript:pad.showEmbedDialog()">
+            
+              Embed
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/ep/pad/static/bFMDcmVKPam">
+            
+              Print
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="pad-moderator-link">
+            
+              Moderated By
+            
+          </a></li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div id="follow-container" src="/ep/pad/pad-follow-button?padId=bFMDcmVKPam">
+    <button type="button" data-tooltip="Follow" class="hp-ui-button padfollow   hp-ui-button-secondary"><span class="hp-ui-button-content icon-follow"></span></button>
+    <button type="button" data-tooltip="Following" class="hp-ui-button padunfollow hidden  hp-ui-button-secondary"><span class="hp-ui-button-content icon-follow"></span></button>
+  </div>
+
+
+
+      
+
+      
+    </div>
+  </nav>
+</header>
+
+<nav id="sitebar">
+  <h1 id="sitebar-heading"><a href="https://hackpad.com/">hackpad</a></h1>
+  <ul id="domain-list"><li class="domain-item" data-domainid="1" data-orgname="hackpad" data-subdomain="&lt;&lt;private-network&gt;&gt;" data-lastlogindate="0"><a href="https://hackpad.com/">hackpad</a></li><li class="domain-item selected" data-domainid="12085" data-orgname="pyconapac2014" data-subdomain="pyconapac2014" data-lastlogindate="0"><a href="https://pyconapac2014.hackpad.com/">pyconapac2014</a></li>
+    <li class="domain-item domain-item-overflow" style="display: none;">
+      <div role="menu" aria-haspopup="true" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-primary"><span class="hp-ui-button-content ">more</span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+    </li>
+    <li class="domain-item domain-item-new">
+      <a href="https://pyconapac2014.hackpad.com/ep/new-site" id="create-space">+ new workspace</a>
+    </li>
+  </ul>
+
+  <div id="account">
+    <div id="faccountnav">
+      
+        <a href="javascript:modals.showModal('#page-login-box', 0);">
+          Sign In
+        </a>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+  <div id="padpage">
+    <div id="padeditor" class="loaded">
+      
+  
+  <script>
+    window.onerror = function(message, file, line, column, errorObj) {
+      etherpad.logError(message, file, line, column, errorObj);
+    };
+    window.onfreakout = function(msg) {
+      if ($('#freakout-dialog').is(':visible')) {
+        return;
+      }
+      trackEvent('freakout', null, null, {
+        url: location.href,
+        padId: clientVars.collab_client_vars.globalPadId,
+        userId: clientVars.userId,
+        error: (msg || "").split(":")[0],
+        errorDetail: msg
+      });
+      modals.showModal("#freakout-dialog", 0, true /* not cancellable */);
+    };
+  </script>
+
+  
+  
+
+  
+
+
+
+<div id="editor" class="syntax notranslate safari doesWrap loaded" autocorrect="off" autocomplete="off" contenteditable="true" style="min-height: 523px; font-family: ProximaNova-Light, nova, arial, sans-serif;"><div id="magicdomid2" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter"><span class="author-p-167864 b"><b>Keynote: Wes McKinney Day 1</b></span></div><div id="magicdomid3" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid4" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-hone emptyGutter"><ul class="listtype-hone listindent1 list-hone1"><li><span class="author-p-167864">Information (Speaker Only) (speaker info, slide link, .. etc)</span></li></ul></div><div id="magicdomid5" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Worked in the finance area,&nbsp;</span></li></ul></div><div id="magicdomid6" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">author of "Python for Data Analysis" and Pandas</span><span class="author-p-174898">(</span><span class="author-p-174898 url"><a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a></span><span class="author-p-174898">).</span><span class="author-p-174928">&nbsp;</span></li></ul></div><div id="magicdomid7" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">run [DataPad](</span><span class="author-p-174928 url"><a href="http://datapad.io/">http://datap</a></span><span class="author-p-174930 attrlink url url"><a class="attrlink" href="http://datapad.io/">a</a></span><span class="author-p-174928 url"><a href="http://datapad.io/">d.io</a></span><span class="author-p-174928">).</span></li></ul></div><div id="magicdomid8" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid9" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-hone emptyGutter"><ul class="listtype-hone listindent1 list-hone1"><li><span class="author-p-167864">&nbsp;FaQ (for everyone)</span></li></ul></div><div id="magicdomid10" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid11" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid12" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid13" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter toc-entry"><span class="author-p-167864 b"><b>Is BI analysis still have strong demand?</b></span></div><div id="magicdomid14" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid15" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Yes</span></li></ul></div><div id="magicdomid16" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid17" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-hone emptyGutter"><ul class="listtype-hone listindent1 list-hone1"><li><span class="author-p-167864">&nbsp;Note (for everyone)</span></li></ul></div><div id="magicdomid18" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter toc-entry"><span class="author-p-167864 b"><b>&nbsp;Python-powered Analytics (for Business)</b></span></div><div id="magicdomid19" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid20" data-author-initials="ML" data-author-name="Miki L" data-author-link="/ep/profile/zZeNcZqvERR" class="ace-line gutter-author-p-174927 emptyGutter toc-entry"><span class="author-p-167864 b"><b>BI </b></span><span class="author-p-174927 b"><b>(Business Intelligence)</b></span></div><div id="magicdomid21" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Querying&nbsp;</span></li></ul></div><div id="magicdomid22" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Reports</span></li></ul></div><div id="magicdomid23" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Alerts</span></li></ul></div><div id="magicdomid24" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter toc-entry"><span class="author-p-167864 b"><b>&nbsp;Analytics</b></span></div><div id="magicdomid25" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">exploration</span></li></ul></div><div id="magicdomid26" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">statistics</span></li></ul></div><div id="magicdomid27" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">modelling / forecasting</span></li></ul></div><div id="magicdomid28" data-author-initials="ML" data-author-name="Miki L" data-author-link="/ep/profile/zZeNcZqvERR" class="ace-line gutter-author-p-174927 emptyGutter"><span class="author-p-167864 b"><b>&nbsp;ETL</b></span><span class="author-p-174926 b"><b> </b></span><span class="author-p-174926 attrlink url"><a class="attrlink" href="http://en.wikipedia.org/wiki/Extract,_transform,_load">wiki</a></span><span class="author-p-174927"> (Extract Transform Load)</span></div><div id="magicdomid29" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-167864">&nbsp;Extract / transform / Load</span></li></ul></div><div id="magicdomid30" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Moving data between storage formats</span><span class="author-p-174927"> (Data Wrangling)</span></li></ul></div><div id="magicdomid31" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Integrating disparate sources</span></li></ul></div><div id="magicdomid32" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Normalization / De-normalization</span></li></ul></div><div id="magicdomid33" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-167864">Data quality / cleanliness issues</span></li></ul></div><div id="magicdomid34" data-author-initials="sl" data-author-name="speed l" data-author-link="/ep/profile/mESloa8SIwt" class="ace-line gutter-author-p-174926 emptyGutter toc-entry"><span class="author-p-174926 b"><b>Good Tools &amp; Resources</b></span></div><div id="magicdomid35" data-author-initials="sl" data-author-name="speed l" data-author-link="/ep/profile/mESloa8SIwt" class="ace-line gutter-author-p-174926 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174926">I</span><span class="author-p-174928">Py</span><span class="author-p-174926">thon (</span><span class="author-p-174926 attrlink url"><a class="attrlink" href="http://nbviewer.ipython.org/">nbviewer.ipython.org</a></span><span class="author-p-174926">)</span></li></ul></div><div id="magicdomid36" data-author-initials="sl" data-author-name="speed l" data-author-link="/ep/profile/mESloa8SIwt" class="ace-line gutter-author-p-174926 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174926">matplotlib, numpy, scipy</span><span class="author-p-174722">&nbsp;</span></li></ul></div><div id="magicdomid37" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>Viable alternative</b></span><span class="author-p-167864 b"><b>s</b></span></div><div id="magicdomid38" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">R</span></li></ul></div><div id="magicdomid39" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Julia</span></li></ul></div><div id="magicdomid40" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Proprietary: SAS, SPSS, Stata</span></li></ul></div><div id="magicdomid41" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">JVMLand</span></li></ul></div><div id="magicdomid42" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid43" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter toc-entry"><span class="author-p-167864 b"><b>PyData Conference!!</b></span></div><div id="magicdomid44" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-167864">c3h3, will we have one pydata taiwan conference?&nbsp;&nbsp;</span></li></ul></div><div id="magicdomid45" data-author-initials="YL" data-author-name="Yu-ching L" data-author-link="/ep/profile/yVDg3NF8tCv" class="ace-line gutter-author-p-174932 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-174932">we have this conference this year, maybe we can hold a meetup then </span><span class="author-p-174932 url"><a href="http://twconf.data-sci.org/">http://twconf.data-sci.org/</a></span></li></ul></div><div id="magicdomid46" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter"><span class="author-p-167864">&nbsp;</span><span class="author-p-167864 url"><a href="http://pydata.org/">http://pydata.org/</a></span></div><div id="magicdomid47" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter"><span class="author-p-167864">&nbsp;</span></div><div id="magicdomid48" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>It took a village...</b></span></div><div id="magicdomid49" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Cython</span></li></ul></div><div id="magicdomid50" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">NumPy</span></li></ul></div><div id="magicdomid51" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">SciPy</span></li></ul></div><div id="magicdomid52" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">matplotlib</span></li></ul></div><div id="magicdomid53" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">statsmodels (</span><span class="author-p-174928 url"><a href="http://statsmodels.sourceforge.net/">http://statsmodels.sourceforge.net/</a></span><span class="author-p-174928">)</span></li></ul></div><div id="magicdomid54" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">IPython</span></li></ul></div><div id="magicdomid55" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid56" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Guiding principle</b></span></div><div id="magicdomid57" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Identify inefficient workflows (user interface) or implementations (performance), and come up with something better</span></li></ul></div><div id="magicdomid58" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid59" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Make the easy things easy</b></span></div><div id="magicdomid60" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Reading and writing from CSV, Excel files, SQL databases</span></li></ul></div><div id="magicdomid61" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Filtering and selection</span></li></ul></div><div id="magicdomid62" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Joins and concatenation</span></li></ul></div><div id="magicdomid63" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-174939">...QQ</span></li></ul></div><div id="magicdomid64" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-174928">哈，剛看你應該會來不急，本來想從後面幫你補起</span></li></ul></div><div id="magicdomid65" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid66" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>Reading CSV files</b></span></div><div id="magicdomid67" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Type conversion or interface</span></li></ul></div><div id="magicdomid68" data-author-initials="ML" data-author-name="Miki L" data-author-link="/ep/profile/zZeNcZqvERR" class="ace-line gutter-author-p-174927 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174927">Performance problem, e.g. memory</span></li></ul></div><div id="magicdomid69" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-174928">wtf...</span></li></ul></div><div id="magicdomid70" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid71" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter toc-entry"><span class="author-p-167864 b"><b>Oh "Dude, you saved us from R"</b></span></div><div id="magicdomid72" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid73" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 emptyGutter"><span class="author-p-167864">Medium Data: Not too big for a single machine, but too big to be dumb about.</span></div><div id="magicdomid74" data-author-initials="C" data-author-name="CCC" data-author-link="/ep/profile/FpCGFpxBgbU" class="ace-line gutter-author-p-174937 emptyGutter"><span class="author-p-174937 attrembed embed"><span class="inline-embed" embed="https://twitter.com/wesmckinn/status/413159516096585729"><div contenteditable="false" class="embed-225178125"><iframe onload="embed.resizeTwitterEmbed(this)" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/tweet(1).html" frameborder="0" scrolling="no" width="100%" style="height: 208px;"></iframe><div class="remove-media"></div></div></span></span></div><div id="magicdomid75" data-author-initials="C" data-author-name="CCC" data-author-link="/ep/profile/FpCGFpxBgbU" class="ace-line gutter-author-p-174937 emptyGutter"><span class="author-p-174937 url"><a href="https://twitter.com/wesmckinn/status/413159516096585729">https://twitter.com/wesmckinn/status/413159516096585729</a></span></div><div id="magicdomid76" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-167864">&nbsp;cool</span></li></ul></div><div id="magicdomid77" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid78" data-author-initials="GC" data-author-name="George C" data-author-link="/ep/profile/oAFwHrtW2yb" class="ace-line gutter-author-p-174945 emptyGutter toc-entry"><span class="author-p-167864 b"><b>&nbsp;</b></span><span class="author-p-174945 b"><b>In Data Science, </b></span><span class="author-p-167864 b"><b>80% time </b></span><span class="author-p-174945 b"><b>spent prepare</b></span><span class="author-p-167864 b"><b> data.</b></span></div><div id="magicdomid79" data-author-initials="C" data-author-name="CCC" data-author-link="/ep/profile/FpCGFpxBgbU" class="ace-line gutter-author-p-174937 emptyGutter"><span class="author-p-174937 attrembed embed"><span class="inline-embed" embed="https://twitter.com/BigDataBorat/status/306596352991830016"><div contenteditable="false" class="embed-932867758"><iframe onload="embed.resizeTwitterEmbed(this)" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/tweet.html" frameborder="0" scrolling="no" width="100%" style="height: 208px;"></iframe><div class="remove-media"></div></div></span></span></div><div id="magicdomid80" data-author-initials="C" data-author-name="CCC" data-author-link="/ep/profile/FpCGFpxBgbU" class="ace-line gutter-author-p-174937 emptyGutter"><span class="author-p-174937 url"><a href="https://twitter.com/BigDataBorat/status/306596352991830016">https://twitter.com/BigDataBorat/status/306596352991830016</a></span></div><div id="magicdomid81" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid82" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>"Python is the second best language for most problems"</b></span></div><div id="magicdomid83" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid84" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Seaborn: statistical data visuali</b></span><span class="author-p-174936 b"><b>z</b></span><span class="author-p-174939 b"><b>ation</b></span></div><div id="magicdomid85" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter"><span class="author-p-174928 url"><a href="http://www.stanford.edu/~mwaskom/software/seaborn/">http://www.stanford.edu/~mwaskom/software/seaborn/</a></span></div><div id="magicdomid86" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid87" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Scikit-learn</b></span></div><div id="magicdomid88" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter"><span class="author-p-174939 url"><a href="http://scikit-learn.org/stable/">http://scikit-learn.org/stable/</a></span></div><div id="magicdomid89" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid90" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>Pandas: the good and bad</b></span></div><div id="magicdomid91" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Ecosystem compatibility</span></li></ul></div><div id="magicdomid92" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Design for broad appeal</span></li></ul></div><div id="magicdomid93" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">The Big Data Problem</span></li></ul></div><div id="magicdomid94" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid95" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Broader data trends</b></span></div><div id="magicdomid96" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Python / R / Julia growing at expense of proprietary tools</span></li></ul></div><div id="magicdomid97" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">JVM-based Big Data Ecosystem</span></li></ul></div><div id="magicdomid98" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Concurrent / multicore programming challenges</span></li></ul></div><div id="magicdomid99" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid100" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter"><span class="author-p-174939">(For the future...)</span></div><div id="magicdomid101" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid102" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Distributed in-memory data analysis</b></span></div><div id="magicdomid103" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">Apply data operations on arbitrarily large data sets spread across a cluster of machines</span></li></ul></div><div id="magicdomid104" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Programming API and Execution Engine separate problems</span></li></ul></div><div id="magicdomid105" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid106" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 emptyGutter toc-entry"><span class="author-p-174939 b"><b>Staying Competitive</b></span></div><div id="magicdomid107" data-author-initials="CK" data-author-name="Cybelia K" data-author-link="/ep/profile/z4t7FJBW41C" class="ace-line gutter-author-p-174939 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174939">"Enterprise money" is still in the JVM ecosystem</span></li></ul></div><div id="magicdomid108" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Building bridges to other languages / ecosystems, where possible</span></li></ul></div><div id="magicdomid109" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid110" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>Community Building</b></span></div><div id="magicdomid111" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Producer-to-Consumer ratio tends to be very low</span></li></ul></div><div id="magicdomid112" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Recruiting and encouraging stars to contribute where they can</span></li></ul></div><div id="magicdomid113" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid114" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-174928 b"><b>DataPad</b></span></div><div id="magicdomid115" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Exploratory analytics and report-building environment</span></li></ul></div><div id="magicdomid116" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Powerful analytical visualization system</span></li></ul></div><div id="magicdomid117" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">Collaboration and sharing tools for teams</span></li></ul></div><div id="magicdomid118" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent1 list-bullet1"><li><span class="author-p-174928">[Live Demo]</span></li></ul></div><div id="magicdomid119" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent2 list-comment2"><li><span class="author-p-167864">&nbsp;Live demo!!</span></li></ul></div><div id="magicdomid120" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent2 list-comment2"><li><span class="author-p-174928">Live demo always fails !!!</span></li></ul></div><div id="magicdomid121" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent2 list-comment2"><li><span class="author-p-167864">sign up for private beta </span><span class="author-p-167864 url"><a href="http://www.datapad.io/signup.html">http://www.datapad.io/signup.html</a></span></li></ul></div><div id="magicdomid122" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent2 list-comment2"><li><span class="author-p-174928">Uses D3.js for their frontend</span></li></ul></div><div id="magicdomid123" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid124" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 emptyGutter toc-entry"><span class="author-p-167864 b"><b>No time </b></span><span class="author-p-174928 b"><b>to finish them all</b></span><span class="author-p-167864 b"><b>&nbsp;</b></span></div><div id="magicdomid125" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-167864">&nbsp;no time for system structure ; )</span></li></ul></div><div id="magicdomid126" class="ace-line longKeep gutter-noauthor"><br></div><div id="magicdomid127" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-hone emptyGutter"><ul class="listtype-hone listindent1 list-hone1"><li><span class="author-p-167864">&nbsp;Reference (for everyone)</span></li></ul></div><div id="magicdomid128" data-author-initials="sl" data-author-name="speed l" data-author-link="/ep/profile/mESloa8SIwt" class="ace-line gutter-author-p-174926 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent2 list-bullet2"><li><span class="author-p-174926 url"><a href="http://datapad.io/">http://datapad.io</a></span></li></ul></div><div id="magicdomid129" data-author-initials="CL" data-author-name="Chao-kuan L" data-author-link="/ep/profile/roN9dQIkTU5" class="ace-line gutter-author-p-174928 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent2 list-bullet2"><li><span class="author-p-174928 url"><a href="http://nbviewer.ipython.org/">http://nbviewer.ipython.org</a></span></li></ul></div><div id="magicdomid130" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-bullet emptyGutter"><ul class="listtype-bullet listindent2 list-bullet2"><li><span class="author-p-167864 url"><a href="http://pydata.org/">http://pydata.org/</a></span></li></ul></div><div id="magicdomid131" data-author-initials="CC" data-author-name="Chien-Hsun C" data-author-link="/ep/profile/xdvYvMrwNhm" class="ace-line gutter-author-p-167864 line-list-type-comment emptyGutter"><ul class="listtype-comment listindent1 list-comment1"><li><span class="author-p-167864">&nbsp;new startup for BI</span></li></ul></div><div id="magicdomid132" data-author-initials="t" data-author-name="tzerjen@gmail.com" data-author-link="/ep/profile/utJymJnNabG" class="ace-line gutter-author-p-174898 emptyGutter"><span class="author-p-174898">@c3h3: Comment PYDATA Hackthon?</span></div><div id="magicdomid133" class="ace-line longKeep gutter-noauthor"><br></div></div>
+<div id="non-editor">
+<div id="sidediv"><table border="0" cellpadding="0" cellspacing="0" align="right"><tbody><tr><td id="sidedivinner"><div></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div><div style="top: 0px;"></div></td></tr></tbody></table></div>
+<div id="overlaysdiv"><!-- --></div>
+<div id="hp-editor-lang" role="menu" aria-haspopup="true" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-primary"><span class="hp-ui-button-content "></span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              txt
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              html
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              coffee
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              java
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              rb
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              c
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              c++
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              js
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#">
+            
+              py
+            
+          </a></li>
+          
+        
+      </ul>
+    </div>
+  </div>
+<div id="hp-editor-headings" role="menu" aria-haspopup="true" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-primary"><span class="hp-ui-button-content "></span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="hp-editor-headings-1">
+            
+              Heading 1
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="hp-editor-headings-2">
+            
+              Heading 2
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="hp-editor-headings-3">
+            
+              Heading 3
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="hp-editor-headings-normal">
+            
+              Normal
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="hp-editor-headings-link">
+            
+              Link to here
+            
+          </a></li>
+          
+        
+      </ul>
+    </div>
+  </div>
+
+<div id="hp-editor-selection-wrapper"><button type="button" id="hp-editor-selection-link" data-tooltip="Create Link" class="hp-ui-button   hp-ui-button-custom"><span class="hp-ui-button-content icon-link"></span></button><input id="hp-editor-selection-link-url" placeholder="Enter link URL"><button type="button" id="hp-editor-selection-link-confirm" class="hp-ui-button   hp-ui-button-custom"><span class="hp-ui-button-content icon-checkMark"></span></button><button type="button" id="hp-editor-selection-link-delete" data-tooltip="Remove Link" class="hp-ui-button   hp-ui-button-custom"><span class="hp-ui-button-content icon-delete"></span></button><button type="button" id="hp-editor-selection-newpad" data-tooltip="Create New Hackpad" class="hp-ui-button   hp-ui-button-custom"><span class="hp-ui-button-content icon-newpad"></span></button><input id="hp-editor-selection-newpad-title" placeholder="Enter title"><button type="button" id="hp-editor-selection-newpad-confirm" class="hp-ui-button   hp-ui-button-custom"><span class="hp-ui-button-content icon-checkMark"></span></button></div>
+</div>
+
+
+  
+  <div id="collections-div" class="sidebar-div">
+    <div id="collection-list-div">
+      <div id="add-to-collection" role="menu" aria-haspopup="true" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-custom"><span class="hp-ui-button-content ">add to collection</span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper" style="display: none;">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="collection-invite-list-item">
+            
+              <form id="collection-invite-form"><input name="xsrf" type="hidden" value="ea913e0c95b55156"><input type="hidden" name="padId" value="bFMDcmVKPam"><i class="icon-addcollection"></i><input type="text" id="collection-picker" placeholder="New or existing collection" autocomplete="off" class="ac_input"></form>
+            
+          </a></li>
+          
+        
+      </ul>
+    </div>
+  </div>
+    <div class="group-link" groupid="rwzZ5SDz0gp"><a href="https://pyconapac2014.hackpad.com/ep/group/rwzZ5SDz0gp" title="PyCon APAC 2014">PyCon APAC 2014</a><div class="remove-group-btn" title="Remove this pad from this collection."><i class="icon-x"></i></div></div></div>
+    <div id="collections-recent-list-wrapper">
+      <div id="collections-recent-label" class="sidebartext">
+        or choose a recent collection:
+      </div>
+      <ul id="collections-recent-list"></ul>
+    </div>
+    <div id="collection-list-overflow"></div>
+  </div>
+
+  <div id="shared-with-settings">
+    <div id="shared-with-settings-inner">
+    
+    <div id="padaccess-menu" role="menu" aria-haspopup="true" disabled="" class="hp-ui-button   hp-ui-button-menu  hp-ui-button-custom" data-tooltip="
+            
+              everyone (public)
+            
+           can access"><span class="hp-ui-button-content "><i class="icon-privacy-public"></i></span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="padaccess-deny">
+            
+              <i class="icon-lock"></i>invitees only
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="padaccess-domain">
+            
+              <i class="icon-privacy-inspace"></i>all workspace members
+            
+          </a></li>
+          
+        
+          
+          <li><a href="https://pyconapac2014.hackpad.com/#" id="padaccess-allow" class="selected">
+            
+              <i class="icon-privacy-public"></i>everyone (public)
+            
+          </a></li>
+          
+        
+      </ul>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  
+
+  <div id="editorbottombox">
+    
+  <div>
+    <a id="editor-last-changed" href="https://pyconapac2014.hackpad.com/ep/pad/summary/bFMDcmVKPam">
+      Latest change
+      <span id="last-saved-timestamp" title="2014-05-17T02:47:06.000Z">2 weeks ago</span>
+    </a>
+  </div>
+
+  <script id="template-user-create-entry" type="text/html">
+    <div class="create">
+      <img />
+      <a class="host"></a> created this <span class="timestamp"></span>.
+    </div>
+  </script>
+
+  <script id="template-invite-user-entry" type="text/html">
+    <div class="invite">
+      <img />
+      <a class="host"></a> invited
+      <a class="user"></a>.
+      <span class="lastAccessed">Seen
+      <span class="lastAccessedTimestamp"></span>.</span>
+      <span class="timestamp"></span>
+    </div>
+  </script>
+
+  <script id="template-invite-group-entry" type="text/html">
+    <div class="invite">
+      <img />
+      <a class="host"></a> added this to collection
+      <a class="collection"></a>. <span class="timestamp"></span>
+    </div>
+  </script>
+
+  <div id="inviteLog-wrapper"><div id="inviteLog" style="display: block;"><div class="invite">
+      <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-clifflu@gmail.com-1400999421364">
+      <a class="host" href="https://pyconapac2014.hackpad.com/ep/profile/roN9dQIkTU5">Chao-kuan Cliff Lu</a> added this to collection
+      <a class="collection" href="https://pyconapac2014.hackpad.com/ep/group/rwzZ5SDz0gp">PyCon APAC 2014</a>. <span class="timestamp" title="2014-05-17T01:42:14.000Z">2 weeks ago</span>
+    </div><div class="create">
+      <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/picture">
+      <a class="host" href="https://pyconapac2014.hackpad.com/ep/profile/xdvYvMrwNhm">Chien-Hsun Chen</a> created this <span class="timestamp" title="2014-05-14T14:30:12.000Z">2 weeks ago</span>.
+    </div></div></div>
+
+  </div>
+
+    </div>
+    
+  <aside id="padsidebar" class="fixed" style="top: 84px; left: 1063.640625px;">
+    
+  
+  <div id="padusers" class="owner">
+    <div id="sharingsettings">
+      
+
+  <div id="friend-picker-div">
+    <form id="invite-form" method="get" action="">
+      <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+      <input type="hidden" name="padId" value="bFMDcmVKPam">
+      <div id="friend-picker-wrapper">
+        <input type="text" id="friend-picker" class="ac_input" placeholder="name / email" autocomplete="off">
+        <div class="ac-loading-spinny"></div>
+        <label for="friend-picker"><i class="icon-invite"></i></label>
+      </div>
+    </form>
+  </div>
+
+
+      <div id="sharesummarywrapper" style="">
+        <span class="sharesummary-with">With </span>
+        <span id="sharesummary" data-tooltip="Show list" data-alttooltip="Hide List"><span class="sharesummarypart">Chien-Hsun Chen</span><span class="sharesummarypart">, </span><span class="sharesummarypart">Chang-Wu Chen</span><span class="sharesummarypart">, </span><span class="sharesummarypart">and 10 others</span></span>
+      </div>
+      
+  
+  
+  
+
+  <div id="otherusers">
+    <div id="otherusers-facepile-wrapper">
+      <img id="otherusers-facepile" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/nophoto.png" class="multiple">
+      <span class="connected"></span>
+    </div>
+    <div id="otheruserstable-wrapper"><ul id="otheruserstable" class="popup-scrollable" style="display: block;"><li id="userg-426433e0487c4914" title="">
+      <figure>
+        
+        <a name="guest">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/nophoto.png" alt="">
+            
+              <span class="connected"></span>
+            
+          </span>
+          <figcaption>
+            Guest
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174937" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/FpCGFpxBgbU">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-ccc.larc@gmail.com-1400999421386" alt="">
+            
+          </span>
+          <figcaption>
+            CCC
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174937" data-name="CCC">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174722" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/mOphocpmBQX">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/avatar.php" alt="">
+            
+          </span>
+          <figcaption>
+            Chang-Wu Chen
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174722" data-name="Chang-Wu Chen">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174928" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/roN9dQIkTU5">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-clifflu@gmail.com-1400999421364" alt="">
+            
+          </span>
+          <figcaption>
+            Chao-kuan Cliff Lu
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174928" data-name="Chao-kuan Cliff Lu">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-167864" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/xdvYvMrwNhm">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/picture" alt="">
+            
+          </span>
+          <figcaption>
+            Chien-Hsun Chen
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.167864" data-name="Chien-Hsun Chen">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174930" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/C06dlN2YIq1">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/avatar(1).php" alt="">
+            
+          </span>
+          <figcaption>
+            Chih Yi Huang
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174930" data-name="Chih Yi Huang">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174939" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/z4t7FJBW41C">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-cybeliak@mail.asteraceae.org-1400999421389" alt="">
+            
+          </span>
+          <figcaption>
+            Cybelia Kao
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174939" data-name="Cybelia Kao">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174945" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/oAFwHrtW2yb">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/avatar(2).php" alt="">
+            
+          </span>
+          <figcaption>
+            George Chang
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174945" data-name="George Chang">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174927" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/zZeNcZqvERR">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-mikimotoh@gmail.com-1400999421361" alt="">
+            
+          </span>
+          <figcaption>
+            Miki Liu
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174927" data-name="Miki Liu">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174926" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/mESloa8SIwt">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-speed.of.lightt@gmail.com-1400999421358" alt="">
+            
+          </span>
+          <figcaption>
+            speed light
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174926" data-name="speed light">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174936" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/njGyEAeYE0n">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-ctchen@gmail.com-1400999421384" alt="">
+            
+          </span>
+          <figcaption>
+            Tom Chen
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174936" data-name="Tom Chen">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174898" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/utJymJnNabG">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-tzerjen@gmail.com-1400999421303" alt="">
+            
+          </span>
+          <figcaption>
+            tzerjen@gmail.com
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174898" data-name="tzerjen@gmail.com">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li><li id="userp-174932" title="">
+      <figure>
+        
+        <a href="https://pyconapac2014.hackpad.com/ep/profile/yVDg3NF8tCv">
+        
+          <span class="user-image">
+            <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/http---s3.amazonaws.com-hackpad-profile-photos-vagante@gmail.com-1400999421375" alt="">
+            
+          </span>
+          <figcaption>
+            Yu-ching Lin
+            
+              <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" class="killuser" alt="Remove User" role="button" data-userid="p.174932" data-name="Yu-ching Lin">
+            
+          </figcaption>
+        </a>
+      </figure>
+    </li></ul></div>
+  </div>
+
+  <script id="template-user-list" type="text/x-handlebars-template">
+    <li id="{{ id }}" title="{{ title }}">
+      <figure>
+        {{#if link}}
+        <a href="{{ link }}" {{#if isEmbed}}target="_blank"{{/if}}>
+        {{else}}
+        <a name="guest">
+        {{/if}}
+          <span class="user-image">
+            <img src="https://dakdwippfbduw.cloudfront.net/static/img/pixel.gif" data-src="{{ img }}" alt="{{ title }}">
+            {{#if connected}}
+              <span class="connected"></span>
+            {{/if}}
+          </span>
+          <figcaption>
+            {{ name }}
+            {{#if enableKill}}
+              <img src="https://dakdwippfbduw.cloudfront.net/static/img/pixel.gif" class="killuser"
+                  alt="Remove User" role="button"
+                  data-userId="{{ userId }}" data-name="{{ name }}">
+            {{/if}}
+          </figcaption>
+        </a>
+      </figure>
+    </li>
+  </script>
+
+      <div id="guestprompts"><!-- --></div>
+    </div>
+  </div>
+
+  <div id="toc-div" class="sidebar-div" style="max-height: 250px;">
+    <ul class="more-than-nine"><li class="toc-entry level0" data-node-id="magicdomid4"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Information-(Speaker-Only)-(sp" tooltip="Information (Speaker Only) (speaker info, slide link, .. etc)" title="Information (Speaker Only) (speaker info, slide link, .. etc)" offset="134">Information (Speaker Only) (speaker info, slide link, .. etc)</a></li><li class="toc-entry level0" data-node-id="magicdomid9"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-FaQ-(for-everyone)" tooltip=" FaQ (for everyone)" title=" FaQ (for everyone)" offset="281"> FaQ (for everyone)</a></li><li class="toc-entry level1" data-node-id="magicdomid13" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Is-BI-analysis-still-have-stro" tooltip="Is BI analysis still have strong demand?" title="Is BI analysis still have strong demand?" offset="403">Is BI analysis still have strong demand?</a></li><li class="toc-entry level0" data-node-id="magicdomid17"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-Note-(for-everyone)" tooltip=" Note (for everyone)" title=" Note (for everyone)" offset="504"> Note (for everyone)</a></li><li class="toc-entry level1" data-node-id="magicdomid18" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-Python-powered-Analytics-(for" tooltip=" Python-powered Analytics (for Business)" title=" Python-powered Analytics (for Business)" offset="551"> Python-powered Analytics (for Business)</a></li><li class="toc-entry level1" data-node-id="magicdomid20" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=BI-(Business-Intelligence)" tooltip="BI (Business Intelligence)" title="BI (Business Intelligence)" offset="602">BI (Business Intelligence)</a></li><li class="toc-entry level1" data-node-id="magicdomid24" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-Analytics" tooltip=" Analytics" title=" Analytics" offset="703"> Analytics</a></li><li class="toc-entry level1" data-node-id="magicdomid34" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Good-Tools-&-Resources" tooltip="Good Tools &amp;amp; Resources" title="Good Tools &amp;amp; Resources" offset="953">Good Tools &amp; Resources</a></li><li class="toc-entry level1" data-node-id="magicdomid37" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Viable-alternatives" tooltip="Viable alternatives" title="Viable alternatives" offset="1029">Viable alternatives</a></li><li class="toc-entry level1" data-node-id="magicdomid43" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=PyData-Conference!!" tooltip="PyData Conference!!" title="PyData Conference!!" offset="1180">PyData Conference!!</a></li><li class="toc-entry level1" data-node-id="magicdomid48" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=It-took-a-village..." tooltip="It took a village..." title="It took a village..." offset="1304">It took a village...</a></li><li class="toc-entry level1" data-node-id="magicdomid56" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Guiding-principle" tooltip="Guiding principle" title="Guiding principle" offset="1505">Guiding principle</a></li><li class="toc-entry level1" data-node-id="magicdomid59" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Make-the-easy-things-easy" tooltip="Make the easy things easy" title="Make the easy things easy" offset="1606">Make the easy things easy</a></li><li class="toc-entry level1 current" data-node-id="magicdomid66" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Reading-CSV-files" tooltip="Reading CSV files" title="Reading CSV files" offset="1780">Reading CSV files</a></li><li class="toc-entry level1" data-node-id="magicdomid71" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Oh-"Dude,-you-saved-us-from-R"" tooltip="Oh &amp;#34;Dude, you saved us from R&amp;#34;" title="Oh &amp;#34;Dude, you saved us from R&amp;#34;" offset="1905">Oh "Dude, you saved us from R"</a></li><li class="toc-entry level1" data-node-id="magicdomid78" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-In-Data-Science,-80%-time-spe" tooltip=" In Data Science, 80% time spent prepare data." title=" In Data Science, 80% time spent prepare data." offset="2271"> In Data Science, 80% time spent prepare data.</a></li><li class="toc-entry level1" data-node-id="magicdomid82" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h="Python-is-the-second-best-lan" tooltip="&amp;#34;Python is the second best language for most problems&amp;#34;" title="&amp;#34;Python is the second best language for most problems&amp;#34;" offset="2563">"Python is the second best language for most problems"</a></li><li class="toc-entry level1" data-node-id="magicdomid84" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Seaborn:-statistical-data-visu" tooltip="Seaborn: statistical data visualization" title="Seaborn: statistical data visualization" offset="2614">Seaborn: statistical data visualization</a></li><li class="toc-entry level1" data-node-id="magicdomid87" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Scikit-learn" tooltip="Scikit-learn" title="Scikit-learn" offset="2690">Scikit-learn</a></li><li class="toc-entry level1" data-node-id="magicdomid90" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Pandas:-the-good-and-bad" tooltip="Pandas: the good and bad" title="Pandas: the good and bad" offset="2766">Pandas: the good and bad</a></li><li class="toc-entry level1" data-node-id="magicdomid95" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Broader-data-trends" tooltip="Broader data trends" title="Broader data trends" offset="2892">Broader data trends</a></li><li class="toc-entry level1" data-node-id="magicdomid102" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Distributed-in-memory-data-ana" tooltip="Distributed in-memory data analysis" title="Distributed in-memory data analysis" offset="3068">Distributed in-memory data analysis</a></li><li class="toc-entry level1" data-node-id="magicdomid106" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Staying-Competitive" tooltip="Staying Competitive" title="Staying Competitive" offset="3169">Staying Competitive</a></li><li class="toc-entry level1" data-node-id="magicdomid110" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=Community-Building" tooltip="Community Building" title="Community Building" offset="3270">Community Building</a></li><li class="toc-entry level1" data-node-id="magicdomid114" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=DataPad" tooltip="DataPad" title="DataPad" offset="3371">DataPad</a></li><li class="toc-entry level1" data-node-id="magicdomid124" style="margin-left: 0em;"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=No-time-to-finish-them-all-" tooltip="No time to finish them all " title="No time to finish them all " offset="3618">No time to finish them all </a></li><li class="toc-entry level0" data-node-id="magicdomid127"><a href="https://pyconapac2014.hackpad.com/Keynote-Wes-McKinney-Day-1-bFMDcmVKPam#:h=-Reference-(for-everyone)" tooltip=" Reference (for everyone)" title=" Reference (for everyone)" offset="3693"> Reference (for everyone)</a></li></ul>
+  </div>
+
+
+  <div id="related-pads-div" class="sidebar-div" style="display: block;">
+    <div class="sidebarheading">
+      <div id="related-pads-menu" role="menu" aria-haspopup="true" class="hp-ui-button hp-ui-button-menu-reverse  hp-ui-button-menu  hp-ui-button-custom"><span class="hp-ui-button-content ">8 Related Pads<i class="icon-privacy-link"></i></span>
+    <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pixel.gif" alt="Arrow" class="hp-ui-button-arrow">
+    <div class="hp-ui-button-menu-wrapper">
+      <ul class="hp-ui-button-list-ul">
+        
+          
+        
+      <li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_ulmfAY8aqe4" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_lyn0G4o2tHh" title="PyCon APAC 2014 Co-Notes Index">PyCon APAC 2014 Co-Notes Index</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_p39MDxzMvio" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_hIBbKNvcvFo" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_BXzCqwknGbK" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_oF20KSJqG4x" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP_rpuY9iTRbUy" title="Untitled">Untitled</a></li><li><a href="https://pyconapac2014.hackpad.com/ZQKz3p7rhmP" title="PyCon APAC 2014 Co-Notes Index">PyCon APAC 2014 Co-Notes Index</a></li></ul>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  
+
+    <div class="clear"></div>
+  </aside>
+
+  </div>
+  
+  <div class="connection-status iphonehide" style="display: none;"><h3>Reconnecting...</h3></div>
+
+  <div id="modaloverlay"><div id="modaloverlay-inner"><!-- --></div></div>
+
+  <div id="mainmodals">
+    <div id="connectionbox" class="modaldialog">
+      <h1 class="h1_disconnect">Disconnected</h1>
+      <h1 class="h1_unauth">No Authorization</h1>
+      <button type="button" class="hp-ui-button dialog-cancel-x  hp-ui-button-custom"><span class="hp-ui-button-content icon-x"></span></button>
+      <div id="connectionboxinner" class="modaldialog-inner">
+        <div class="connecting">
+          Connecting...
+        </div>
+        <div class="reconnecting">
+          Reestablishing connection...
+        </div>
+        <div class="disconnected">
+          <div id="disconnected_looping">
+            <p>
+              <b>We're having trouble talking to the Hackpad synchronization
+                server.</b>
+              You may be connecting through an incompatible firewall or proxy
+              server.
+            </p>
+          </div>
+          <div id="disconnected_initsocketfail">
+            <p>
+              <b>We were unable to connect to the Hackpad synchronization
+              server.</b>
+              This may be due to an incompatibility with your web
+              browser or internet connection.
+            </p>
+          </div>
+
+          <div id="disconnected_unknown">
+            <p>
+              <b>Lost connection with Hackpad.</b>
+              This may be due to a loss of network connectivity. If you close
+              this window you may lose up to 30 seconds of unsaved work.
+            </p>
+          </div>
+          <div id="disconnected_slowcommit">
+            <p>
+              <b>Server not responding.</b>
+              This may be due to network connectivity issues or high load on
+              the server.
+            </p>
+          </div>
+          <div id="disconnected_unauth">
+            <p>
+              You are no longer allowed to access this pad. Reconnect to
+              request access.
+            </p>
+          </div>
+          <div id="reconnect_form">
+            <button type="button" id="forcereconnect" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Reconnect Now</span></button>
+            <img class="loading-indicator" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/status-ball.gif">
+            <span class="failed-indicator">Failed to reconnect.</span>
+          </div>
+          <div id="reconnect_advise">
+            <p>
+              If this continues to happen, please <a target="_blank" href="https://pyconapac2014.hackpad.com/ep/support">let us know</a>
+              (opens in new window).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="freakout-dialog" class="modaldialog">
+      <h1>How embarrassing...</h1>
+      <div id="freakout-dialog-inner" class="modaldialog-inner">
+        <div class="disconnected">
+          <div>
+            <p>
+              <b>We experienced an error on the page that is causing problems
+              with saving your work.</b>
+              Continuing to edit on the page without refreshing your browser
+              would lead to some <b>loss of your work</b>.
+            </p>
+          </div>
+          <div id="freakout-options">
+            <button type="button" onclick="window.location.reload()" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Refresh Now</span></button>
+            <button type="button" id="freakout-copy-first" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">I want to copy my work first, please.</span></button>
+          </div>
+          <div id="freakout_advise">
+            <p>
+              If this continues to happen, please <a target="_blank" href="https://pyconapac2014.hackpad.com/ep/support">let us know</a>
+              (opens in new window).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="moderated-modal" class="modaldialog">
+      <h1>Heads Up!</h1>
+      <div id="moderated-modal-inner" class="modaldialog-inner">
+
+        <p id="moderated-modal-msg">
+          This pad is moderated.  Your changes will require owner approval.
+        </p>
+        <div class="dialog-buttons">
+          <button type="button" onclick="padmodals.hideModal(0)" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Cancel</span></button>
+          <button type="submit" class="hp-ui-button default  hp-ui-button-primary"><span class="hp-ui-button-content ">Yes! I want to edit</span></button>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <div id="sharebox" class="modaldialog">
+      <div id="sharebox-inner" class="modaldialog-inner">
+      </div>
+    </div>
+
+    <div id="insertimagedialog" class="modaldialog">
+     <h1>Insert an Image</h1>
+     <div class="modaldialog-inner">
+      <form name="insert-image-form" id="insert-image-form">
+        <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+        <br>
+        <div id="insertimagedialog-upload">
+          <input multiple="" type="file" id="web-image-upload" name="photo[]" accept="image/*">
+          <div id="web-image-upload-separator">or</div>
+          <input type="text" id="web-image-url" name="web-image-url" placeholder="paste a url">
+        </div>
+        <div id="insertimagedialog-drag">
+          Tip: you can simply <b>drag&amp;drop</b> images into the editor
+          from your desktop!
+        </div>
+        <br>
+         <div class="dialog-buttons">
+           <a href="javascript: modals.hideModal(0);">Cancel</a>
+           <button type="submit" class="hp-ui-button default  hp-ui-button-primary"><span class="hp-ui-button-content ">Insert</span></button>
+         </div>
+         <div class="clear"></div>
+       </form>
+     </div>
+    </div>
+
+    
+  
+  <div id="killuser" class="modaldialog">
+    <h1>Stop sharing with <span class="name"></span>?</h1>
+    <div class="modaldialog-inner">
+      <div id="killuser-access">
+        This pad is shared with "<span class="access"></span>", so
+        <span class="name"></span> will still be able to access it.
+      </div>
+      <form id="killuser-form" action="https://pyconapac2014.hackpad.com/ep/pad/removeuser" onsubmit="return modals.submitModal(this);">
+        <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+        <input type="hidden" id="padId" name="padId" value="bFMDcmVKPam">
+        <input type="hidden" id="userId" name="userId">
+        <div class="dialog-buttons">
+          <a href="javascript: padmodals.hideModal(0);">Cancel</a>
+          <button type="submit" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Stop Sharing</span></button>
+        </div>
+        <div class="clear"></div>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="embedpaddialog" class="modaldialog">
+   <h1>Embed This Pad</h1>
+   <div class="modaldialog-inner">
+    <label for="embedpad-code">
+      Paste the following into your web page or blog:
+    </label>
+    <textarea id="embedpad-code" rows="6" readonly=""></textarea>
+    <br>
+    <div class="clear"></div>
+    Embed as
+    <select id="embedpad-type" onchange="pad.updateEmbedCode()">
+      <option value="">Editable Hackpad</option>
+      <option value="html">Plain HTML</option>
+      <option value="html-notitle">Plain HTML without title</option>
+    </select>
+    <div class="dialog-buttons">
+      <a class="button" href="javascript:padmodals.hideModal(0);">Close</a>
+    </div>
+  </div>
+
+  </div>
+
+  
+
+  <form id="reconnectform" method="post" action="https://pyconapac2014.hackpad.com/ep/pad/reconnect" accept-charset="UTF-8" style="display: none;">
+    <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+    <input type="hidden" class="padId" name="padId" value="bFMDcmVKPam">
+    <input type="hidden" class="diagnosticInfo" name="diagnosticInfo">
+    <input type="hidden" class="missedChanges" name="missedChanges">
+  </form>
+  </div>
+
+
+
+  
+  
+<footer id="pad-page-footer" class="iphonehide">
+  
+  © Dropbox Inc.
+  
+  <a href="https://hackpad.com/83netTWokps#Hackpad-Terms-of-Service">Terms</a>
+  <a href="https://hackpad.com/RpTWPko6ER2#Hackpad-Privacy-Policy">Privacy</a>
+  <a id="footer-support-link" href="mailto:support@hackpad.com">Support</a>
+  <a href="https://hackpad.com/sIkGLftzN7c#About-Hackpad">About</a>
+  <a href="https://hackpad.com/blog">Blog</a>
+</footer>
+
+  
+<div id="page-login-box" class="modaldialog" style="right: inherit; left: 50%;">
+  <button type="button" onclick="modals.hideModal();" class="hp-ui-button dialog-cancel-x  hp-ui-button-custom"><span class="hp-ui-button-content icon-x"></span></button>
+  <div>
+    
+    
+  <div id="login-form-wrapper">
+  
+
+  <h1 class="iphonehide">Log in / Sign up</h1>
+  <button type="button" onclick="modals.hideModal();" class="hp-ui-button dialog-cancel-x  hp-ui-button-custom"><span class="hp-ui-button-content icon-x"></span></button>
+
+  <div class="modaldialog-body">
+    <div id="page-loging-lhs">
+      <img width="230" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/pencil-love.png">
+    </div>
+
+    <div id="nofacebook" class="page-login-rhs">
+      <a id="login-google" href="https://www.google.com/accounts/o8/ud?openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.return_to=https%3A%2F%2Fhackpad.com%2Fep%2Faccount%2Fopenid%3Fcont%3Dhttps%253A%252F%252Fpyconapac2014.hackpad.com%252FbFMDcmVKPam%26domain%3D12085&openid.realm=https%3A%2F%2Fhackpad.com&openid.mode=checkid_setup&openid.ui.ns=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fui%2F1.0&openid.ui.mode=popup&openid.ui.icon=true&openid.ns.oauth=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Foauth%2F1.0&openid.oauth.consumer=hackpad.com&openid.oauth.scope=https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F&openid.ns.ax=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ax.mode=fetch_request&openid.ax.type.email=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ax.type.firstname=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ax.type.lastname=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ax.required=email%2Cfirstname%2Clastname" class="google-signin-button" target="_self">
+        <img src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/goog.png">
+        <span>Sign in with <strong>Google</strong></span>
+      </a>
+
+      
+        <a id="login-facebook" class="fb-login-required" href="https://pyconapac2014.hackpad.com/bFMDcmVKPam">
+          <img class="fb-connect-button" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/fb.png">
+          <span>Sign in with <strong>Facebook</strong></span>
+        </a>
+      
+
+      <span id="login-or"><span class="page-login-or"></span><span class="page-login-or-lbl">or</span><span class="page-login-or"></span></span>
+
+      <form id="login-form" method="post" action="https://pyconapac2014.hackpad.com/ep/account/signin">
+        <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+        <span id="login-email-wrapper" class="login-email-input">
+          <label for="login-email"><i class="icon-privacy-invite"></i></label>
+          <input id="login-email" name="email" type="email" placeholder="Email" autocorrect="off" autocapitalize="off">
+          <button type="button" id="login-email-go" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Go</span></button>
+        </span>
+
+        <div id="login-email-secondary">
+          <i class="icon-back"></i>
+          <span id="login-password-wrapper" class="login-email-input">
+            <label for="login-password"><i class="icon-lock"></i></label>
+            <input id="login-password" name="password" type="password" placeholder="Password">
+          </span>
+          <a href="https://pyconapac2014.hackpad.com/ep/account/forgot-password" id="login-forgot-password">Forgot password?</a>
+
+          <input id="signin-remember-me" type="hidden" group="1" name="rememberMe" value="1">
+          <input type="hidden" name="cont" value="https://pyconapac2014.hackpad.com/bFMDcmVKPam">
+          
+
+          <div id="login-email-tertiary" class="modal-more-info">
+            <span id="login-full-name-wrapper" class="login-email-input">
+              <label for="login-fullname"><i class="icon-user"></i></label>
+              <input id="login-fullname" name="name" placeholder="Full Name">
+            </span>
+          </div>
+
+          <button id="login-submit" type="submit" disabled="">Start using Hackpad</button>
+        </div>
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+  
+  </div>
+
+  </div>
+</div>
+
+
+  
+  <div id="connecting-to-facebook" class="modaldialog" style="padding:30px; margin-top: 100px">
+    <img alt="" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/status-ball(1).gif" style="float:right">
+    <span style="font-size:21px; color:#666">Signing in using Facebook...</span>
+    <div style="margin-top:20px"><button type="submit" class="hp-ui-button   hp-ui-button-primary"><span class="hp-ui-button-content ">Cancel</span></button></div>
+  </div>
+  
+
+
+
+  <button type="button" id="feedbackbutton" class="hp-ui-button iphonehide ipadhide  hp-ui-button-action"><span class="hp-ui-button-content ">feedback</span></button>
+  
+
+<div id="feedbackbox" class="modaldialog">
+  <h1 class="with-content">Contact Support</h1>
+
+  <button type="button" onclick="modals.hideModal()" class="hp-ui-button dialog-cancel-x  hp-ui-button-custom"><span class="hp-ui-button-content icon-x"></span></button>
+
+  <div class="modaldialog-inner">
+
+    <form id="feedback-form">
+      <input name="xsrf" type="hidden" value="ea913e0c95b55156">
+
+
+      
+        <input type="text" name="feedbackbox-email" id="feedbackbox-email" class="modalfield" placeholder="Your email">
+        <br>
+      
+
+      <select name="feedbackbox-topic" id="feedbackbox-topic" class="modalfield">
+        <option value="">Please select a topic</option>
+        <option value="howto">General usage / How does this work?</option>
+        <option value="feature">Feature request</option>
+        <option value="login">Login / account issue</option>
+        <option value="broken">Broken / can't load hackpad</option>
+        <option value="mobile">Mobile / iOS issue</option>
+        <option value="other">Other issue</option>
+        <option value="love">Send your love! ♥</option>
+      </select><br>
+
+      <div id="feedbackbox-faq">Please check out our <a href="https://hackpad.com/How-to-use-Hackpad-mlZvEsJykI5" target="_blank">How-to Guide</a> and <a href="https://hackpad.com/Hackpad-FAQ-tq56fI63mz3" target="_blank">FAQ</a> first to see if your question is already answered! :)<br><br></div>
+      <div id="feedbackbox-feature-request">If you have a feature request, please add it to <a href="https://hackpad.com/mwN5" target="_blank">this pad</a>.  Thanks!<br><br></div>
+
+      <input type="text" name="feedbackbox-subject" id="feedbackbox-subject" class="modalfield" placeholder="Summary"><br>
+      <textarea id="feedbackbox-message" rows="6" cols="40" class="modalfield" placeholder="Give as much detail as possible."></textarea>
+      <div style="text-align:right">
+        <div id="feedbackbox-response"><!-- --></div>
+        <button type="button" id="feedbackbox-send" class="hp-ui-button default  hp-ui-button-primary"><span class="hp-ui-button-content ">Send</span></button>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+
+
+
+ 
+
+    
+
+    
+
+    
+    
+    <script type="text/javascript">
+  // <![CDATA[
+var clientVars = {"proTitle":"","creatorId":167864,"initialTitle":"Keynote: Wes McKinney Day 1","padTitle":"Keynote: Wes McKinney Day 1","collab_client_vars":{"initialAttributedText":{"text":"Keynote%3A%20Wes%20McKinney%20Day%201%0A%0A*Information%20%28Speaker%20Only%29%20%28speaker%20info%2C%20slide%20link%2C%20..%20etc%29%0A*Worked%20in%20the%20finance%20area%2C%20%0A*author%20of%20%22Python%20for%20Data%20Analysis%22%20and%20Pandas%28http%3A//pandas.pydata.org/%29.%20%0A*run%20%5BDataPad%5D%28http%3A//datapad.io%29.%0A%0A*%20FaQ%20%28for%20everyone%29%0A%0A%0A%0AIs%20BI%20analysis%20still%20have%20strong%20demand%3F%0A%0A*Yes%0A%0A*%20Note%20%28for%20everyone%29%0A%20Python-powered%20Analytics%20%28for%20Business%29%0A%0ABI%20%28Business%20Intelligence%29%0A*Querying%20%0A*Reports%0A*Alerts%0A%20Analytics%0A*exploration%0A*statistics%0A*modelling%20/%20forecasting%0A%20ETL%20wiki%20%28Extract%20Transform%20Load%29%0A*%20Extract%20/%20transform%20/%20Load%0A*Moving%20data%20between%20storage%20formats%20%28Data%20Wrangling%29%0A*Integrating%20disparate%20sources%0A*Normalization%20/%20De-normalization%0A*Data%20quality%20/%20cleanliness%20issues%0AGood%20Tools%20%26%20Resources%0A*IPython%20%28nbviewer.ipython.org%29%0A*matplotlib%2C%20numpy%2C%20scipy%20%0AViable%20alternatives%0A*R%0A*Julia%0A*Proprietary%3A%20SAS%2C%20SPSS%2C%20Stata%0A*JVMLand%0A%0APyData%20Conference%21%21%0A*c3h3%2C%20will%20we%20have%20one%20pydata%20taiwan%20conference%3F%20%20%0A*we%20have%20this%20conference%20this%20year%2C%20maybe%20we%20can%20hold%20a%20meetup%20then%20http%3A//twconf.data-sci.org/%0A%20http%3A//pydata.org/%0A%20%0AIt%20took%20a%20village...%0A*Cython%0A*NumPy%0A*SciPy%0A*matplotlib%0A*statsmodels%20%28http%3A//statsmodels.sourceforge.net/%29%0A*IPython%0A%0AGuiding%20principle%0A*Identify%20inefficient%20workflows%20%28user%20interface%29%20or%20implementations%20%28performance%29%2C%20and%20come%20up%20with%20something%20better%0A%0AMake%20the%20easy%20things%20easy%0A*Reading%20and%20writing%20from%20CSV%2C%20Excel%20files%2C%20SQL%20databases%0A*Filtering%20and%20selection%0A*Joins%20and%20concatenation%0A*...QQ%0A*%u54C8%uFF0C%u525B%u770B%u4F60%u61C9%u8A72%u6703%u4F86%u4E0D%u6025%uFF0C%u672C%u4F86%u60F3%u5F9E%u5F8C%u9762%u5E6B%u4F60%u88DC%u8D77%0A%0AReading%20CSV%20files%0A*Type%20conversion%20or%20interface%0A*Performance%20problem%2C%20e.g.%20memory%0A*wtf...%0A%0AOh%20%22Dude%2C%20you%20saved%20us%20from%20R%22%0A%0AMedium%20Data%3A%20Not%20too%20big%20for%20a%20single%20machine%2C%20but%20too%20big%20to%20be%20dumb%20about.%0A*%0Ahttps%3A//twitter.com/wesmckinn/status/413159516096585729%0A*%20cool%0A%0A%20In%20Data%20Science%2C%2080%25%20time%20spent%20prepare%20data.%0A*%0Ahttps%3A//twitter.com/BigDataBorat/status/306596352991830016%0A%0A%22Python%20is%20the%20second%20best%20language%20for%20most%20problems%22%0A%0ASeaborn%3A%20statistical%20data%20visualization%0Ahttp%3A//www.stanford.edu/%7Emwaskom/software/seaborn/%0A%0AScikit-learn%0Ahttp%3A//scikit-learn.org/stable/%0A%0APandas%3A%20the%20good%20and%20bad%0A*Ecosystem%20compatibility%0A*Design%20for%20broad%20appeal%0A*The%20Big%20Data%20Problem%0A%0ABroader%20data%20trends%0A*Python%20/%20R%20/%20Julia%20growing%20at%20expense%20of%20proprietary%20tools%0A*JVM-based%20Big%20Data%20Ecosystem%0A*Concurrent%20/%20multicore%20programming%20challenges%0A%0A%28For%20the%20future...%29%0A%0ADistributed%20in-memory%20data%20analysis%0A*Apply%20data%20operations%20on%20arbitrarily%20large%20data%20sets%20spread%20across%20a%20cluster%20of%20machines%0A*Programming%20API%20and%20Execution%20Engine%20separate%20problems%0A%0AStaying%20Competitive%0A*%22Enterprise%20money%22%20is%20still%20in%20the%20JVM%20ecosystem%0A*Building%20bridges%20to%20other%20languages%20/%20ecosystems%2C%20where%20possible%0A%0ACommunity%20Building%0A*Producer-to-Consumer%20ratio%20tends%20to%20be%20very%20low%0A*Recruiting%20and%20encouraging%20stars%20to%20contribute%20where%20they%20can%0A%0ADataPad%0A*Exploratory%20analytics%20and%20report-building%20environment%0A*Powerful%20analytical%20visualization%20system%0A*Collaboration%20and%20sharing%20tools%20for%20teams%0A*%5BLive%20Demo%5D%0A*%20Live%20demo%21%21%0A*Live%20demo%20always%20fails%20%21%21%21%0A*sign%20up%20for%20private%20beta%20http%3A//www.datapad.io/signup.html%0A*Uses%20D3.js%20for%20their%20frontend%0A%0ANo%20time%20to%20finish%20them%20all%20%0A*%20no%20time%20for%20system%20structure%20%3B%20%29%0A%0A*%20Reference%20%28for%20everyone%29%0A*http%3A//datapad.io%0A*http%3A//nbviewer.ipython.org%0A*http%3A//pydata.org/%0A*%20new%20startup%20for%20BI%0A@c3h3%3A%20Comment%20PYDATA%20Hackthon%3F%0A%0A","attribs":"*0*1+r*0|2+2*0*2*3+1*0|1+1q*4*2*5+1*4|1+t*4*2*5+1*4+1b*6+s*4|1+2*4*2*5+1*4+q*7*8+1*4+6*0|2+2*0*2*3+1*0|4+n*0*1+14*0|2+2*0*2*5+1*0+3*0*1|1+1*0|1+1*0*2*3+1*0|1+l*0*1|1+15*0|1+1*0*1+3*9*1+n*0|1+1*0*2*5+1*0|1+a*0*2*5+1*0|1+8*0*2*5+1*0|1+7*0*1+a*0|1+1*0*2*5+1*0|1+c*0*2*5+1*0|1+b*0*2*5+1*0|1+o*0*1+4*a*1+1*a*b+4*9+p*0|1+1*0*2*c+1*0|1+s*0*2*5+1*0+z*9+h*0|1+1*0*2*5+1*0|1+u*0*2*5+1*0|1+x*0*2*5+1*0|1+y*a*1+m*0*1|1+1*a*2*5+1*a+1*4+2*a+6*a*d+k*a|1+2*a*2*5+1*a+o*e+1*0|1+1*4*1+i*0*1+1*4*1|1+1*4*2*5+1*4|1+2*4*2*5+1*4|1+6*4*2*5+1*4|1+u*4*2*5+1*4+7*0|2+2*0*1+j*0|1+1*0*2*c+1*0+1e*f|1+1*f*2*c+1*f+2m*0|2+l*0+1*4|1+1*4*1+k*4|1+1*4*2*5+1*4|1+7*4*2*5+1*4|1+6*4*2*5+1*4|1+6*4*2*5+1*4|1+b*4*2*5+1*4|1+1e*4*2*5+1*4+7*g|1+1*h|1+1*h*1+h*h|1+1*h*2*5+1*h|2+39*h*1+p*h|1+1*h*2*5+1*h|1+1l*h*2*5+1*h|1+o*h*2*5+1*h|1+o*4*2*c+1*h+5*4|1+1*4*2*c+1*4|2+o*4*1+h*4|1+1*4*2*5+1*4|1+t*4*2*5+1*9+w*4|1+1*4*2*c+1*4+6*h|1+1*0|1+1*0*1+u*0|2+2*0+24*g|1+1*g*i+1*g|1+1*g+1j*0|1+1*0*2*c+1*0|2+7*0*1+1*j*1+h*0*1+9*j*1+d*0*1|1+7*g*k+1*g|2+1o*h|1+1*h*1+1i*h|2+2*h*1+x*l*1+1*h*1+5*4|1+1*4+1e*h|2+2*h*1+c*h|2+x*4|1+1*4*1+o*4|1+1*4*2*5+1*4|1+o*4*2*5+1*4|1+o*4*2*5+1*4+k*h|2+2*h*1+j*h|1+1*h*2*5+1*h|1+1n*h*2*5+1*h+s*4|1+1*4*2*5+1*4|1+1a*h|3+m*h*1+z*h|1+1*h*2*5+1*h+2g*4|1+1*4*2*5+1*4|1+1j*h|1+1*h*1+j*h|1+1*h*2*5+1*h+1c*4|1+1*4*2*5+1*4+1s*g|1+1*4|1+1*4*1|1+j*4*1*2*5+1*4|1+1c*4*2*5+1*4+1p*h|1+1*4|1+1*4*1|1+8*4*1*2*5+1*4|1+1i*4*2*5+1*4|1+15*4*2*5+1*4|1+16*4*2*5+1*4+b*0|1+1*0*2*m+1*0+c*4|1+1*4*2*m+1*4+q*0|1+1*0*2*m+1*0+1m*4|1+1*4*2*m+1*4|2+v*0*1+8*4*1+i*0*1+1*0|1+1*0*2*c+1*0+x*4*1|1+1*0*1|1+1*0*2*3+1*0|1+q*0*2*n+1*a+h*4|1+1*4*2*n+1*4+r*0|1+1*0*2*n+1*0|1+j*0*2*c+1*0+j|1+1*6+v|2+2"},"rev":1522,"padId":"bFMDcmVKPam","globalPadId":"12085$bFMDcmVKPam","historicalAuthorData":{"p.167864":{"colorId":0,"name":"Chien-Hsun Chen","userLink":"/ep/profile/xdvYvMrwNhm"},"p.174928":{"colorId":2,"name":"Chao-kuan Cliff Lu","userLink":"/ep/profile/roN9dQIkTU5"},"p.174898":{"colorId":5,"name":"tzerjen@gmail.com","userLink":"/ep/profile/utJymJnNabG"},"p.174930":{"colorId":8,"name":"Chih Yi Huang","userLink":"/ep/profile/C06dlN2YIq1"},"p.174927":{"colorId":2,"name":"Miki Liu","userLink":"/ep/profile/zZeNcZqvERR"},"p.174926":{"colorId":6,"name":"speed light","userLink":"/ep/profile/mESloa8SIwt"},"p.174722":{"colorId":2,"name":"Chang-Wu Chen","userLink":"/ep/profile/mOphocpmBQX"},"p.174932":{"colorId":7,"name":"Yu-ching Lin","userLink":"/ep/profile/yVDg3NF8tCv"},"p.174937":{"colorId":0,"name":"CCC","userLink":"/ep/profile/FpCGFpxBgbU"},"p.174939":{"colorId":6,"name":"Cybelia Kao","userLink":"/ep/profile/z4t7FJBW41C"},"p.174945":{"colorId":8,"name":"George Chang","userLink":"/ep/profile/oAFwHrtW2yb"},"p.174936":{"colorId":6,"name":"Tom Chen","userLink":"/ep/profile/njGyEAeYE0n"}},"apool":{"numToAttrib":{"0":["author","p.167864"],"1":["bold","true"],"2":["insertorder","first"],"3":["list","hone1"],"4":["author","p.174928"],"5":["list","bullet1"],"6":["author","p.174898"],"7":["author","p.174930"],"8":["link","http://datapd.io"],"9":["author","p.174927"],"10":["author","p.174926"],"11":["link","http://en.wikipedia.org/wiki/Extract,_transform,_load"],"12":["list","comment1"],"13":["link","http://nbviewer.ipython.org/"],"14":["author","p.174722"],"15":["author","p.174932"],"16":["author","p.174937"],"17":["author","p.174939"],"18":["embed","https://twitter.com/wesmckinn/status/413159516096585729"],"19":["author","p.174945"],"20":["embed","https://twitter.com/BigDataBorat/status/306596352991830016"],"21":["author","p.174936"],"22":["list","comment2"],"23":["list","bullet2"]},"nextNum":24},"clientIp":"140.114.77.29","clientAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36"},"friendUserIds":[],"globalPadId":"12085$bFMDcmVKPam","initialOptions":{"guestPolicy":"allow"},"initialRevisionList":[],"invitedGroupInfos":[{"groupId":"rwzZ5SDz0gp","name":"PyCon APAC 2014","userCnt":1}],"invitedUserInfos":[{"name":"Chien-Hsun Chen","userId":"p.167864","userLink":"/ep/profile/xdvYvMrwNhm","userPic":"https://graph.facebook.com/1025586530/picture?type=square","status":"creator","colorId":1},{"name":"Chang-Wu Chen","userId":"p.174722","userLink":"/ep/profile/mOphocpmBQX","userPic":"https://www.gravatar.com/avatar.php?default=https%3A%2F%2Fhackpad.com%2Fstatic%2Fimg%2Fnophoto.png&gravatar_id=fd349a1dc80c933aefebdedc1d1e9a0e&size=100","status":"following","colorId":1},{"name":"tzerjen@gmail.com","userId":"p.174898","userLink":"/ep/profile/utJymJnNabG","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Ftzerjen%40gmail.com%3F1400999421303","status":"following","colorId":1},{"name":"speed light","userId":"p.174926","userLink":"/ep/profile/mESloa8SIwt","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fspeed.of.lightt%40gmail.com%3F1400999421358","status":"following","colorId":1},{"name":"Miki Liu","userId":"p.174927","userLink":"/ep/profile/zZeNcZqvERR","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fmikimotoh%40gmail.com%3F1400999421361","status":"following","colorId":1},{"name":"Chao-kuan Cliff Lu","userId":"p.174928","userLink":"/ep/profile/roN9dQIkTU5","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fclifflu%40gmail.com%3F1400999421364","status":"following","colorId":1},{"name":"Chih Yi Huang","userId":"p.174930","userLink":"/ep/profile/C06dlN2YIq1","userPic":"https://www.gravatar.com/avatar.php?default=https%3A%2F%2Fhackpad.com%2Fstatic%2Fimg%2Fnophoto.png&gravatar_id=ba7b4773d48ad1d0cc9c547fad51eb4e&size=100","status":"following","colorId":1},{"name":"Yu-ching Lin","userId":"p.174932","userLink":"/ep/profile/yVDg3NF8tCv","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fvagante%40gmail.com%3F1400999421375","status":"following","colorId":1},{"name":"Tom Chen","userId":"p.174936","userLink":"/ep/profile/njGyEAeYE0n","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fctchen%40gmail.com%3F1400999421384","status":"following","colorId":1},{"name":"CCC","userId":"p.174937","userLink":"/ep/profile/FpCGFpxBgbU","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fccc.larc%40gmail.com%3F1400999421386","status":"following","colorId":1},{"name":"Cybelia Kao","userId":"p.174939","userLink":"/ep/profile/z4t7FJBW41C","userPic":"https://hackpad.imgix.net/http%3A%2F%2Fs3.amazonaws.com%2Fhackpad-profile-photos%2Fcybeliak%40mail.asteraceae.org%3F1400999421389","status":"following","colorId":1},{"name":"George Chang","userId":"p.174945","userLink":"/ep/profile/oAFwHrtW2yb","userPic":"https://www.gravatar.com/avatar.php?default=https%3A%2F%2Fhackpad.com%2Fstatic%2Fimg%2Fnophoto.png&gravatar_id=96c9dbf3705a981afbb718af277b5672&size=100","status":"following","colorId":1}],"isProPad":true,"isPublicPad":true,"padId":"bFMDcmVKPam","siteName":"pyconapac2014","titleIsReadOnly":false,"userColor":1,"userName":"Guest","attachmentsBucket":"hackpad-attachments","s3BucketRoot":"s3.amazonaws.com","clientIp":"140.114.77.29","colorPalette":["#2996c3","#c66c78","#53af98","#daa458","#8a6fb1","#d98175","#87b747","#c98e6a","#5888b7","#c6759f","#b5b251","#50bad3"],"disableFB":false,"facebookClientId":"145393915506961","isDesktopApp":false,"isMobileApp":false,"isMobile":false,"serverTimestamp":1401069662241,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36","accountPrivs":{"maxRevisions":1000},"dropboxConnected":false,"encryptedUserId":"","shouldGetFbLoginStatus":false,"useFbChat":false,"userId":"g.426433e0487c4914","userIsGuest":true,"userLink":"","userPic":"","initialSpaces":[{"id":1,"orgName":"hackpad","subDomain":"\x3c\x3cprivate-network>>","isDeleted":false,"lastLoginDate":0,"url":"https://hackpad.com/"},{"id":12085,"orgName":"pyconapac2014","subDomain":"pyconapac2014","createdDate":"2014-05-06T02:53:32.000Z","isDeleted":false,"lastLoginDate":0,"url":"https://pyconapac2014.hackpad.com/"}],"xsrf":"ea913e0c95b55156","isDogfood":false,"cdn":"https://dakdwippfbduw.cloudfront.net"};
+  // ]]>
+</script>
+    
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+"//cdn.mxpnl.com/libs/mixpanel-2.1.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+mixpanel.init("51ca7558fe905a645b2ecfaf07d08a62");
+mixpanel.identify("ea913e0c95b55156");
+if (clientVars && !clientVars.userIsGuest && clientVars.userName) {
+  mixpanel.name_tag(clientVars.userName);
+  mixpanel.people.identify("ea913e0c95b55156");
+}
+//]]>
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-24086041-1']);
+_gaq.push(['_setDomainName', 'hackpad.com']);
+_gaq.push(['_setCustomVar', 1, 'User Type', 'Guest', 2]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var logSearchPerformed = (function () {
+  var lastSearchPerformed = null;
+  return function (query, numResults, label) {
+    var trimmedQuery = $.trim(query);
+    $.doTimeout('log-search-query', 800, function () {
+      if (trimmedQuery && (trimmedQuery != lastSearchPerformed)) {
+        trackEvent("search_performed", null /* action */, label /* label */, { query: query, numResults: numResults });
+        lastSearchPerformed = trimmedQuery;
+      }
+    });
+  }
+})();
+
+function trackEvent(eventName, action, label, extras) {
+  var dict = extras || {};
+  dict["action"] = action;
+  dict["label"] = label;
+  mixpanel.track(eventName, dict);
+  _gaq.push(["_trackEvent", eventName, action, label]);
+}
+
+function _isMeta(e) {
+	if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return true;
+
+	// Logic that handles checks for the middle mouse button, based
+	// on [jQuery](https://github.com/jquery/jquery/blob/master/src/event.js#L466).
+	var which = e.which, button = e.button;
+	if (!which && button !== undefined) {
+	  return (!button & 1) && (!button & 2) && (button & 4);
+	} else if (which === 2) {
+	  return true;
+	}
+	return false;
+};
+
+function trackLinks(css, eventName, extras) {
+  $(css).bind('click', function(e) {
+  	var el = this;
+  	var dict = extras || {};
+  	dict['url'] = el.href;
+
+    trackEvent(eventName, null, null, dict);
+
+  	if (el.href && el.target !== '_blank' && !_isMeta(e)) {
+      e.preventDefault();
+
+      // Navigate to the url after just enough of a timeout (300 ms).
+      setTimeout(function() {
+        window.location.href = el.href;
+      }, 300);
+    }
+  });
+}
+
+function trackPageview(optPath) {
+  optPath = optPath || document.location.path + document.location.query;
+  mixpanel.track_pageview(optPath);
+  _gaq.push(['_trackPageview', optPath]);
+}
+
+//]]>
+
+</script>
+ 
+    <script type="text/javascript" async="" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/bf7a6fc925d6f6984fd776fbb5993c16.js" crossorigin="anonymous" onload="$.holdReady(false);" onreadystatechange="if (this.readyState == &#39;loaded&#39; || this.readyState == &#39;complete&#39;) { $.holdReady(false); }"></script>
+
+    
+      
+      
+    
+
+    <script type="text/javascript" async="" src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/dropins.js" id="dropboxjs" data-app-key="0d6svpz10vgp18t"></script>
+    <!--start,8 | accessPadLocal,23 | after addClientVars,102 | before data,105 | before html generation,112 | done,492-->
+
+    <noscript>
+      &lt;div&gt;
+        You'll need to turn on JavaScript to use Hackpad in all of its
+        awesomeness. ^_^
+      &lt;/div&gt;
+    </noscript>
+  
+
+ <div id="newcomethidden" style="display: none;"><iframe src="./Keynote  Wes McKinney Day 1 - pyconapac2014.hackpad.com_files/xhrXdFrame.html"></iframe></div></body></html>
